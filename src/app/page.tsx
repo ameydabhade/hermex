@@ -73,33 +73,33 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
+      <section className="relative bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 overflow-hidden">
+        <div className="absolute inset-0 bg-white/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-white"
+              className="text-gray-800"
             >
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
                 Discover
-                <span className="block text-yellow-300">Amazing Products</span>
+                <span className="block text-amber-600">Amazing Products</span>
               </h1>
-              <p className="text-xl lg:text-2xl mb-8 opacity-90">
+              <p className="text-xl lg:text-2xl mb-8 text-gray-700">
                 Experience the best in beauty, groceries, and more with premium quality and unbeatable prices.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/category/beauty"
-                  className="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 text-center"
+                  className="bg-amber-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-amber-700 transition-all duration-300 transform hover:scale-105 text-center"
                 >
                   Shop Beauty
                 </Link>
                 <Link
                   href="/category/groceries"
-                  className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300 text-center"
+                  className="border-2 border-amber-600 text-amber-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-amber-600 hover:text-white transition-all duration-300 text-center"
                 >
                   Shop Groceries
                 </Link>
@@ -161,7 +161,7 @@ const Home = () => {
         </div>
         
         {/* Features Bar */}
-        <div className="relative bg-white/10 backdrop-blur-md">
+        <div className="relative bg-amber-100/50 backdrop-blur-md">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
               {heroFeatures.map((feature, index) => (
@@ -170,9 +170,9 @@ const Home = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="flex items-center space-x-3 text-white"
+                  className="flex items-center space-x-3 text-gray-700"
                 >
-                  <feature.icon className="w-8 h-8 text-yellow-300" />
+                  <feature.icon className="w-8 h-8 text-amber-600" />
                   <div>
                     <p className="font-semibold">{feature.title}</p>
                     <p className="text-sm opacity-80">{feature.description}</p>

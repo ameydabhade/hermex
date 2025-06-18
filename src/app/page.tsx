@@ -114,8 +114,8 @@ const Home = () => {
             >
               <div className="relative w-full h-96 lg:h-[500px]">
                 <Image
-                  src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600"
-                  alt="Shopping Experience"
+                  src="https://plus.unsplash.com/premium_photo-1683141052679-942eb9e77760?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Premium Shopping Experience"
                   fill
                   className="object-cover rounded-2xl shadow-2xl"
                 />

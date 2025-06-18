@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { MagnifyingGlassIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
@@ -14,7 +14,7 @@ interface ApiResponse {
   limit: number;
 }
 
-const SearchPage = () => {
+const SearchContent = () => {
   const searchParams = useSearchParams();
   const query = searchParams.get('q') || '';
   

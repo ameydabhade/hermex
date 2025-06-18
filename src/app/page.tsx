@@ -65,7 +65,7 @@ const Home = () => {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-amber-600"></div>
       </div>
     );
   }
@@ -130,8 +130,8 @@ const Home = () => {
                 className="absolute -right-4 top-8 bg-white rounded-xl p-4 shadow-lg max-w-xs"
               >
                 <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                    <StarIcon className="w-6 h-6 text-purple-600" />
+                  <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center">
+                    <StarIcon className="w-6 h-6 text-amber-600" />
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">4.9/5 Rating</p>
@@ -272,7 +272,7 @@ const Home = () => {
           >
             <Link
               href="/products"
-              className="inline-flex items-center bg-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-purple-700 transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center bg-amber-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-amber-700 transition-all duration-300 transform hover:scale-105"
             >
               View All Products
               <ChevronRightIcon className="w-5 h-5 ml-2" />
@@ -282,7 +282,7 @@ const Home = () => {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-600">
+      <section className="py-16 bg-gradient-to-r from-amber-50 to-orange-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -290,17 +290,17 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-white mb-4">Stay in the Loop</h2>
-            <p className="text-xl text-white/90 mb-8">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">Stay in the Loop</h2>
+            <p className="text-xl text-gray-700 mb-8">
               Get exclusive deals, new product alerts, and style inspiration delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-6 py-4 rounded-full border-0 focus:ring-4 focus:ring-white/20 outline-none text-gray-900"
+                className="flex-1 px-6 py-4 rounded-full border border-amber-200 focus:ring-4 focus:ring-amber-200 outline-none text-gray-900 bg-white"
               />
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300">
+              <button className="bg-amber-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-amber-700 transition-colors duration-300">
                 Subscribe
               </button>
             </div>

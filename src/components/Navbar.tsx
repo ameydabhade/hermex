@@ -52,7 +52,7 @@ const Navbar = () => {
                 <Link
                   key={category.slug}
                   href={`/category/${category.slug}`}
-                  className="text-gray-700 hover:text-purple-600 font-medium transition-colors duration-200"
+                  className="text-gray-700 hover:text-amber-600 font-medium transition-colors duration-200"
                 >
                   {category.name}
                 </Link>
@@ -69,7 +69,7 @@ const Navbar = () => {
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Search products..."
-                    className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-full focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all duration-200"
+                    className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-full focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all duration-200"
                   />
                 </div>
               </form>
@@ -78,28 +78,28 @@ const Navbar = () => {
             {/* Right Icons */}
             <div className="flex items-center space-x-4">
               {/* Mobile Search */}
-              <button className="lg:hidden p-2 text-gray-700 hover:text-purple-600">
+              <button className="lg:hidden p-2 text-gray-700 hover:text-amber-600">
                 <MagnifyingGlassIcon className="w-6 h-6" />
               </button>
 
               {/* Wishlist */}
-              <button className="hidden sm:block p-2 text-gray-700 hover:text-purple-600 transition-colors duration-200">
+              <button className="hidden sm:block p-2 text-gray-700 hover:text-amber-600 transition-colors duration-200">
                 <HeartIcon className="w-6 h-6" />
               </button>
 
               {/* Account */}
-              <button className="hidden sm:block p-2 text-gray-700 hover:text-purple-600 transition-colors duration-200">
+              <button className="hidden sm:block p-2 text-gray-700 hover:text-amber-600 transition-colors duration-200">
                 <UserIcon className="w-6 h-6" />
               </button>
 
               {/* Cart */}
               <button
                 onClick={() => setIsCartOpen(true)}
-                className="relative p-2 text-gray-700 hover:text-purple-600 transition-colors duration-200"
+                className="relative p-2 text-gray-700 hover:text-amber-600 transition-colors duration-200"
               >
                 <ShoppingBagIcon className="w-6 h-6" />
                 {getTotalItems() > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-purple-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">
+                  <span className="absolute -top-1 -right-1 bg-amber-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">
                     {getTotalItems()}
                   </span>
                 )}
@@ -108,7 +108,7 @@ const Navbar = () => {
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="md:hidden p-2 text-gray-700 hover:text-purple-600"
+                className="md:hidden p-2 text-gray-700 hover:text-amber-600"
               >
                 {isMobileMenuOpen ? (
                   <XMarkIcon className="w-6 h-6" />
@@ -133,7 +133,7 @@ const Navbar = () => {
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Search products..."
-                    className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-full focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
+                    className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-full focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none"
                   />
                 </div>
               </form>
@@ -144,7 +144,7 @@ const Navbar = () => {
                   <Link
                     key={category.slug}
                     href={`/category/${category.slug}`}
-                    className="block text-gray-700 hover:text-purple-600 font-medium py-2"
+                    className="block text-gray-700 hover:text-amber-600 font-medium py-2"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {category.name}

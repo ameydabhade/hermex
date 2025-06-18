@@ -99,7 +99,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           >
             <button
               onClick={handleAddToCart}
-              className="flex-1 bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors duration-200 flex items-center justify-center space-x-2"
+              className="flex-1 bg-amber-600 text-white py-2 px-4 rounded-lg hover:bg-amber-700 transition-colors duration-200 flex items-center justify-center space-x-2"
             >
               <ShoppingBagIcon className="w-4 h-4" />
               <span className="text-sm font-medium">Add to Cart</span>
@@ -121,7 +121,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           )}
 
           {/* Title */}
-          <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-purple-600 transition-colors duration-200">
+          <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-amber-600 transition-colors duration-200">
             {product.title}
           </h3>
 

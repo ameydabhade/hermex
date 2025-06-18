@@ -88,7 +88,7 @@ const Cart = () => {
                               <p className="text-gray-500 mb-6">Start shopping to fill it up!</p>
                               <button
                                 onClick={() => setIsCartOpen(false)}
-                                className="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors duration-200"
+                                className="bg-amber-600 text-white px-6 py-2 rounded-lg hover:bg-amber-700 transition-colors duration-200"
                               >
                                 Continue Shopping
                               </button>
@@ -152,7 +152,7 @@ const Cart = () => {
                                           <button
                                             type="button"
                                             onClick={() => removeFromCart(item.product.id)}
-                                            className="font-medium text-purple-600 hover:text-purple-500"
+                                            className="font-medium text-amber-600 hover:text-amber-500"
                                           >
                                             Remove
                                           </button>
@@ -180,7 +180,7 @@ const Cart = () => {
                         <div className="mt-6">
                           <a
                             href="#"
-                            className="flex items-center justify-center rounded-md border border-transparent bg-purple-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-purple-700 transition-colors duration-200"
+                            className="flex items-center justify-center rounded-md border border-transparent bg-amber-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-amber-700 transition-colors duration-200"
                           >
                             Checkout
                           </a>
@@ -190,7 +190,7 @@ const Cart = () => {
                             or{' '}
                             <button
                               type="button"
-                              className="font-medium text-purple-600 hover:text-purple-500"
+                              className="font-medium text-amber-600 hover:text-amber-500"
                               onClick={() => setIsCartOpen(false)}
                             >
                               Continue Shopping

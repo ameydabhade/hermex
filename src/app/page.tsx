@@ -12,8 +12,7 @@ import {
   CreditCardIcon,
   GiftIcon
 } from '@heroicons/react/24/solid';
-import { HeartIcon, ShoppingBagIcon } from '@heroicons/react/24/outline';
-import { Product, useCart } from '../contexts/CartContext';
+import { Product } from '../contexts/CartContext';
 import ProductCard from '../components/ProductCard';
 
 interface ApiResponse {
@@ -27,7 +26,6 @@ const Home = () => {
   const [featuredProducts, setFeaturedProducts] = useState<Product[]>([]);
   const [categories, setCategories] = useState<{ name: string; slug: string; image: string; count: number }[]>([]);
   const [loading, setLoading] = useState(true);
-  const { addToCart } = useCart();
 
   useEffect(() => {
     const fetchData = async () => {

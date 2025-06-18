@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
@@ -31,14 +31,14 @@ const CategoryPage = () => {
     }
   }, [category, currentPage, sortBy]);
 
-  const fetchProducts = async () => {
+  const fetchProducts = useCallback(async () => {
     setLoading(true);
     try {
       const url = `https://dummyjson.com/products/category/${category}?limit=${productsPerPage}&skip=${(currentPage - 1) * productsPerPage}`;
       const response = await fetch(url);
       const data: ApiResponse = await response.json();
       
-      let sortedProducts = [...data.products];
+      const sortedProducts = [...data.products];
       
       // Apply sorting
       if (sortBy === 'price-low') {
@@ -58,7 +58,7 @@ const CategoryPage = () => {
       console.error('Error fetching products:', error);
       setLoading(false);
     }
-  };
+  }, [category, currentPage, productsPerPage, sortBy]);
 
   const sortOptions = [
     { value: 'title', label: 'Name (A-Z)' },
@@ -136,7 +136,7 @@ const CategoryPage = () => {
           <div className="text-center py-20">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">No products found</h3>
             <p className="text-gray-600">
-              Sorry, we couldn't find any products in this category.
+              Sorry, we couldn&apos;t find any products in this category.
             </p>
           </div>
         ) : (

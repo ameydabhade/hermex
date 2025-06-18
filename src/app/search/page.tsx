@@ -38,7 +38,7 @@ const SearchPage = () => {
       const response = await fetch(`https://dummyjson.com/products/search?q=${encodeURIComponent(query)}&limit=${productsPerPage}&skip=${(currentPage - 1) * productsPerPage}`);
       const data: ApiResponse = await response.json();
       
-      let sortedProducts = [...data.products];
+      const sortedProducts = [...data.products];
       
       // Apply sorting
       if (sortBy === 'price-low') {
@@ -95,7 +95,7 @@ const SearchPage = () => {
             Search Results
           </h1>
           <p className="text-lg text-gray-600">
-            Results for "{query}"
+            Results for &quot;{query}&quot;
           </p>
         </div>
 

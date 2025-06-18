@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  FunnelIcon, 
   Squares2X2Icon, 
   ListBulletIcon,
   ChevronDownIcon
@@ -24,7 +23,7 @@ const ProductsPage = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState('title');
   const [filterCategory, setFilterCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
+
   const [currentPage, setCurrentPage] = useState(1);
   const [totalProducts, setTotalProducts] = useState(0);
   
@@ -46,7 +45,7 @@ const ProductsPage = () => {
       const response = await fetch(url);
       const data: ApiResponse = await response.json();
       
-      let sortedProducts = [...data.products];
+      const sortedProducts = [...data.products];
       
       // Apply sorting
       if (sortBy === 'price-low') {

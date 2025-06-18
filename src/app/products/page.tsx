@@ -109,7 +109,7 @@ const ProductsPage = () => {
                     setFilterCategory(e.target.value);
                     setCurrentPage(1);
                   }}
-                  className="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2 pr-8 focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
+                  className="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2 pr-8 focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none"
                 >
                   {categories.map((category) => (
                     <option key={category.value} value={category.value}>
@@ -125,7 +125,7 @@ const ProductsPage = () => {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2 pr-8 focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
+                  className="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2 pr-8 focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none"
                 >
                   {sortOptions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -149,7 +149,7 @@ const ProductsPage = () => {
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-md transition-colors duration-200 ${
                     viewMode === 'grid'
-                      ? 'bg-white text-purple-600 shadow-sm'
+                      ? 'bg-white text-amber-600 shadow-sm'
                       : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
@@ -159,7 +159,7 @@ const ProductsPage = () => {
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-md transition-colors duration-200 ${
                     viewMode === 'list'
-                      ? 'bg-white text-purple-600 shadow-sm'
+                      ? 'bg-white text-amber-600 shadow-sm'
                       : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
@@ -173,7 +173,7 @@ const ProductsPage = () => {
         {/* Products Grid/List */}
         {loading ? (
           <div className="flex items-center justify-center py-20">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-amber-600"></div>
           </div>
         ) : (
           <>
@@ -219,7 +219,7 @@ const ProductsPage = () => {
                         onClick={() => setCurrentPage(pageNumber)}
                         className={`px-4 py-2 text-sm font-medium rounded-lg ${
                           currentPage === pageNumber
-                            ? 'bg-purple-600 text-white'
+                            ? 'bg-amber-600 text-white'
                             : 'text-gray-700 bg-white border border-gray-300 hover:bg-gray-50'
                         }`}
                       >

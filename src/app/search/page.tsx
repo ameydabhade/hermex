@@ -116,7 +116,7 @@ const SearchPage = () => {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2 pr-8 focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
+                  className="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2 pr-8 focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none"
                 >
                   {sortOptions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -133,7 +133,7 @@ const SearchPage = () => {
         {/* Search Results */}
         {loading ? (
           <div className="flex items-center justify-center py-20">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-amber-600"></div>
           </div>
         ) : products.length === 0 ? (
           <div className="text-center py-20">
@@ -193,7 +193,7 @@ const SearchPage = () => {
                         onClick={() => setCurrentPage(pageNumber)}
                         className={`px-4 py-2 text-sm font-medium rounded-lg ${
                           currentPage === pageNumber
-                            ? 'bg-purple-600 text-white'
+                            ? 'bg-amber-600 text-white'
                             : 'text-gray-700 bg-white border border-gray-300 hover:bg-gray-50'
                         }`}
                       >

@@ -1,23 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Lora } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "../contexts/CartContext";
 import Navbar from "../components/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const lora = Lora({
+  variable: "--font-lora",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
   title: "Hermex - Premium Ecommerce Experience",
-  description: "Discover amazing products with the best shopping experience. Beauty, groceries, and more.",
-  keywords: "ecommerce, shopping, beauty, groceries, online store",
+  description: "Discover amazing products with the best shopping experience. Beauty, groceries, and more delivered with premium quality.",
+  keywords: "ecommerce, shopping, beauty, groceries, online store, hermex",
   authors: [{ name: "Hermex Team" }],
   viewport: "width=device-width, initial-scale=1",
 };
@@ -30,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${lora.variable} antialiased font-lora`}
       >
         <CartProvider>
           <div className="min-h-screen bg-gray-50">

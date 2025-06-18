@@ -109,7 +109,7 @@ const ProductsPage = () => {
                     setFilterCategory(e.target.value);
                     setCurrentPage(1);
                   }}
-                  className="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2 pr-8 focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none"
+                  className="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2 pr-8 focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none text-gray-900 font-medium"
                 >
                   {categories.map((category) => (
                     <option key={category.value} value={category.value}>
@@ -125,7 +125,7 @@ const ProductsPage = () => {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2 pr-8 focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none"
+                  className="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2 pr-8 focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none text-gray-900 font-medium"
                 >
                   {sortOptions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -139,7 +139,7 @@ const ProductsPage = () => {
 
             {/* Right Side - View Mode and Results Count */}
             <div className="flex items-center justify-between gap-4">
-              <span className="text-sm text-gray-500">
+              <span className="text-sm text-gray-800 font-medium">
                 Showing {products.length} of {totalProducts} products
               </span>
               
@@ -206,7 +206,7 @@ const ProductsPage = () => {
                   <button
                     onClick={() => setCurrentPage(currentPage - 1)}
                     disabled={currentPage === 1}
-                    className="px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-4 py-2 text-sm font-medium text-gray-800 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     Previous
                   </button>
@@ -231,7 +231,7 @@ const ProductsPage = () => {
                   <button
                     onClick={() => setCurrentPage(currentPage + 1)}
                     disabled={currentPage === totalPages}
-                    className="px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-4 py-2 text-sm font-medium text-gray-800 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     Next
                   </button>
